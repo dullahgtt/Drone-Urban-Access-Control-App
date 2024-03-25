@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+</head>
+<body>
+    <h1>Define Zones and Paths</h1>
+    <form method="POST">
+        <label for="zone_coords">Zone Coordinates:</label>
+        <input type="text" name="zone_coords" id="zone_coords" placeholder="e.g., 40.7135,-74.0065,40.7145,-74.0055">
+
+        
+        <label for="zone_color">Zone Color:</label>
+        <select name="zone_color" id="zone_color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <br>
+        <input type="submit" value="Generate Map">
+    </form>
+</body>
+</html>
