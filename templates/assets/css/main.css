@@ -634,6 +634,7 @@ section {
 --------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
+  margin-top: 20px;
   font-size: 32px;
   font-family: var(--font-secondary);
   color: #001f8d;
@@ -1832,19 +1833,28 @@ section {
   font-family: var(--font-primary);
 }
 
+.footer .bi-linkedin i { 
+  font-size: 2000px;
+}
+
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 100px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 65%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   margin-right: 10px;
+  margin-bottom: 20px;
   transition: 0.3s;
+  margin-left: 20px;
 }
+
+
+
 
 .footer .social-links a:hover {
   color: #fff;
