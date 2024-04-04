@@ -805,7 +805,7 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/our-model.png") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -816,14 +816,17 @@ section {
   }
 }
 
+
 .call-to-action h3 {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
+  filter: none;
 }
 
 .call-to-action p {
   color: #fff;
+  filter: none;
 }
 
 .call-to-action .cta-btn {
