@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'NoFlyZone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'noflyzone_db',  # The name of your database
+        'USER': 'postgres',      # Your PostgreSQL username
+        'PASSWORD': 'passForNFZ',  # The password for the postgres user
+        'HOST': 'localhost',    # Assuming your database is on the local machine
+        'PORT': '',             # Default PostgreSQL port is used if this is left empty
     }
 }
+
 
 
 # Password validation
