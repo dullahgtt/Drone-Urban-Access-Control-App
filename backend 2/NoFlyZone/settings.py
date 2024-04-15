@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from osgeo import gdal
+import geos
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,8 +88,9 @@ DATABASES = {
     }
 }
 
-GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.8.5/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/Cellar/geos/3.12.1/lib/libgeos_c.dylib'
+# I CHANGED THE PATHS TO SEE IF THIS IS MORE UNIVERSAL (NOT SURE IF IT WORKS)
+GDAL_LIBRARY_PATH = gdal.__file__
+GEOS_LIBRARY_PATH = geos.__file__
 
 
 # Password validation

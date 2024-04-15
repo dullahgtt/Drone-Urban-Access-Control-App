@@ -1,25 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
-</head>
-<body>
-    <h1>Define Zones and Paths</h1>
-    <form method="POST">
-        <label for="zone_coords">Zone Coordinates:</label>
-        <input type="text" name="zone_coords" id="zone_coords" placeholder="e.g., 40.7135,-74.0065,40.7145,-74.0055">
 
-        
-        <label for="zone_color">Zone Color:</label>
-        <select name="zone_color" id="zone_color">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
-        </select>
-        <br>
-        <input type="submit" value="Generate Map">
-    </form>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>No Fly Zone: Drone Delivery</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Logis
+  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>No Fly Zone</h1>
+      </a>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Login Section ======= -->
+    <section id="login" class="login">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+
+            <div class="section-title">
+              <h2>Login</h2>
+            </div>
+
+            <form action="/login" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required>
+                </div>
+              </div>
+
+              <div class="text-center"><button type="submit">Login</button></div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Login Section -->
+
+    <!-- ======= Signup Section ======= -->
+    <section id="signup" class="signup">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+
+            <div class="section-title">
+              <h2>Signup</h2>
+            </div>
+
+            <form action="/signup" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required>
+                </div>
+              </div>
+
+              <div class="text-center"><button type="submit">Signup</button></div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Signup Section -->
+
+    <!-- ======= Map Zone Collection Section ======= -->
+    <section id="map-zone-collection" class="map-zone-collection">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+
+            <div class="section-title">
+              <h2>Map Zone Collection</h2>
+            </div>
+
+            <!-- Include your Python code for mapping here -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Map Zone Collection Section -->
+
+    <!-- ======= Display Zones on Maps Section ======= -->
+    <section id="display-zones-on-maps" class="display-zones-on-maps">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+
+            <div class="section-title">
+              <h2>Display Zones on Maps</h2>
+            </div>
+
+            <!-- Include your Python code for displaying zones on maps here -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Display Zones on Maps Section -->
+
+  </main>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
