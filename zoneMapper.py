@@ -43,7 +43,12 @@ def load_user(user_id):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # I want to link the main.css file to the index.html file here
+    css_url = css_url('static', filename='main.css')
+
+    
+    
+    return render_template('index.html', css_url=css_url)
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
