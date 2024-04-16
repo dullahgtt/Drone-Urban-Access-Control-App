@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Zones</title>
+</head>
+<body>
+    <!-- Main Toolbar -->
+<header id="main-toolbar" class="main-toolbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">No Fly Zone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="property_info.html">Property Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map_zones.html">Zone Map</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+    <h1>Map Zones</h1>
+    <div id="map-container">
+        <iframe src="{{ map_path }}" width="800" height="600"></iframe>
+    </div>
+    <h2>Create Zone</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="boundary" placeholder="Boundary Coordinates"><br>
+        <button type="submit">Create Zone</button>
+    </form>
+</body>
+</html>
