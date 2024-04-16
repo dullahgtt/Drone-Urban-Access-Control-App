@@ -4,17 +4,29 @@ import folium
 from shapely.geometry import Polygon
 import matplotlib.pyplot as plt
 from folium.plugins import Draw
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
+csrf = CSRFProtect(app)
 
 # User class for Flask-Login
 class User(UserMixin):
     def __init__(self, username, password):
         self.id = username
         self.password = password
+        
+class SignupForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Sign Up')
+
 
 # REPLACE WITH ACTUAL DATABASE
 users = {'admin': User('admin', 'admin')}
@@ -29,16 +41,18 @@ def index():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+    form = SignupForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
         
         # Placeholder for user creation (you can save to database here)
         users[username] = User(username, password)
 
         return redirect('/login')  # Redirect to login page after signup
 
-    return render_template('signup.html')  # Render signup page
+    return render_template('signup.html', form=form)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
