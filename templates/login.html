@@ -35,20 +35,13 @@
         </nav>
       </header>
 
-    <div class="login_page">
-      <h1>Login Form</h1>
-
       <form method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="username" placeholder="Enter your username">
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="Enter your password"><br>
-        <button type="submit">Login</button>
-      </form>
-    {% if error_message %}
-        <p>{{ error_message }}</p>
-    {% endif %}
-    </div>
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username(size=32) }}
+        {{ form.password.label }} {{ form.password(size=32) }}
+        {{ form.submit }}
+    </form>
+    
 
 
 

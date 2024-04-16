@@ -26,6 +26,12 @@ class SignupForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Sign Up')
+    
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Login')
+
 
 
 # REPLACE WITH ACTUAL DATABASE
@@ -53,22 +59,13 @@ def signup():
 
     return render_template('signup.html', form=form)
 
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        user = users.get(username)
-        if user and user.password == password:
-            login_user(user)
-            return redirect('/property_info')  # Redirect to property info page after login
-        else:
-            # Handle invalid login (placeholder message)
-            return render_template('login.html', error_message='Invalid credentials')
-
-    return render_template('login.html')  # Render login page
+    form = LoginForm()
+    if form.validate_on_submit():
+        # Process login form
+        return redirect('/property_info')
+    return render_template('login.html', form=form)
 
 @app.route('/property_info', methods=['GET', 'POST'])
 @login_required
