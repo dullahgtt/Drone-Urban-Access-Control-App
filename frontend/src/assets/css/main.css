@@ -1,0 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.app-banner {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-section {
+    background-color: #0096d2;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.delivery-partner, .why-nfz, .explore-model, .human-factors {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    flex-basis: 30%;
+    background-color: #f9f9f9;
+}
+
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    cursor: pointer;
+}
+
+/* Sign Up - main.css */ 
+
+.sign-up-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.sign-up-form label {
+    display: block;
+    margin-top: 20px;
+}
+
+.sign-up-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Login - main.css */
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Dashboard - main.css */
+
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+}
