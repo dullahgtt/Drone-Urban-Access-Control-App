@@ -10,24 +10,24 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.webp" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='img/favicon.webp') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Logis
@@ -81,7 +81,7 @@
 
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-            <img src="assets/img/about-section.jpg" class="img-fluid" alt="">
+            <img src="static/img/about-section.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>Why No Fly Zone?</h3>
@@ -144,7 +144,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/ui-design.png" alt="" class="img-fluid">
+                <img src="static/img/ui-design.png" alt="" class="img-fluid">
               </div>
               <h3>UI Design & Usability</h3>
               <p>Enhance user experience with intuitive navigation, clear labels, and responsive design for seamless interaction across devices.</p>
@@ -154,7 +154,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/privacy-trust.jpg" alt="" class="img-fluid">
+                <img src="static/img/privacy-trust.jpg" alt="" class="img-fluid">
               </div>
               <h3>Privacy & Trust</h3>
               <p>Foster trust through end-to-end encryption safeguarding user data, alongside transparent policies granting users control over their personal information.</p>
@@ -164,7 +164,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/interactive-mechanisms.jpg" alt="" class="img-fluid">
+                <img src="static/img/interactive-mechanisms.jpg" alt="" class="img-fluid">
               </div>
               <h3>Engagement & Feedback Mechanisms</h3>
               <p>Enhance user engagement with interactive tutorials for first-time users and facilitate real-time feedback and suggestions through in-app features.</p>
@@ -174,7 +174,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/real-time-alert.jpg" alt="" class="img-fluid">
+                <img src="static/img/real-time-alert.jpg" alt="" class="img-fluid">
               </div>
               <h3>Safety & Emergency Awareness</h3>
               <p>Ensure safety with real-time alerts for nearby drone activity and expedite assistance with a quick-access emergency contact feature.</p>
@@ -184,7 +184,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/sensory-ability.jpg" alt="" class="img-fluid">
+                <img src="static/img/sensory-ability.jpg" alt="" class="img-fluid">
               </div>
               <h3>Sensory Functions & Perceptual Abilities</h3>
               <p>Customized sensory elements, ensuring readability and accessibility while optimizing visibility through contrast, color, and typography.</p>
@@ -194,7 +194,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/cognitive-function.jpg" alt="" class="img-fluid">
+                <img src="static/img/cognitive-function.jpg" alt="" class="img-fluid">
               </div>
               <h3>Cognitive Functioning</h3>
               <p>Simplified navigation and decision-making processes minimize cognitive load, supported by clear and intuitive cues for seamless user interaction.</p>
@@ -263,15 +263,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="static/js/main.js"></script>
 
 </body>
 
