@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'zones'
+    'zones',  # Make sure 'zones' is listed correctly as a separate entry.
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
