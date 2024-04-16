@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>http://127.0.0.1:5500/templates/index.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
@@ -9,44 +9,24 @@
 </head>
 <body>
 
-    <!-- Header (if needed) -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <h1>No Fly Zone</h1>
-            </a>
-        </div>
-    </header><!-- End Header -->
-    <!-- Main Toolbar -->
-<header id="main-toolbar" class="main-toolbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">No Fly Zone</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="signup.html">Signup</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="property_info.html">Property Info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map_zones.html">Zone Map</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <div class="login_page">
+      <h1>Login Form</h1>
+
+      <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Enter your username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Enter your password"><br>
+        <button type="submit">Login</button>
+      </form>
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+    </div>
   
 
-    <!-- Main Content -->
+    <!-- Main Content 
     <main id="main">
         <h1>Login Page</h1>
         <form method="POST">
@@ -58,12 +38,9 @@
         {% if error_message %}
             <p>{{ error_message }}</p>
         {% endif %}
-    </main><!-- End #main -->
+    </main> End #main -->
 
-    <!-- Footer (if needed) -->
-    <footer id="footer" class="footer">
-        <!-- Footer content here -->
-    </footer><!-- End Footer -->
+
 
     <!-- Scripts -->
     <!-- Vendor JS Files -->
