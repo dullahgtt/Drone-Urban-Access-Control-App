@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-- Link to the main CSS file -->
-    <link href="static/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
 
@@ -13,7 +13,6 @@
       <h1>Login Form</h1>
 
       <form method="POST">
-        {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" name="username" placeholder="Enter your username">
         <label for="password">Password:</label>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map Zones</title>
     <!-- Link to the main CSS file -->
-    <link href="static/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
     <!-- Main Toolbar -->
@@ -42,7 +42,6 @@
     </div>
     <h2>Create Zone</h2>
     <form method="POST">
-        {% csrf_token %}
         <input type="text" name="boundary" placeholder="Boundary Coordinates"><br>
         <button type="submit">Create Zone</button>
     </form>
