@@ -3,6 +3,7 @@ from flask_login import LoginManager, UserMixin, login_user, current_user, login
 import folium
 from shapely.geometry import Polygon
 import matplotlib.pyplot as plt
+from folium.plugins import Draw
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -21,6 +22,10 @@ users = {'admin': User('admin', 'admin')}
 @login_manager.user_loader
 def load_user(user_id):
     return users.get(user_id)
+
+@app.route('/')
+def index():
+    return redirect('/index.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -79,22 +84,26 @@ def map_zones():
 
     map_center = [40.7128, -74.0060]  # Default map center (NYC)
     mymap = folium.Map(location=map_center, zoom_start=13)
+    draw = Draw()
 
     # Example zone data (placeholder)
     zones_data = [{'boundary': [(-74.008, 40.706), (-74.003, 40.706), (-74.003, 40.712), (-74.008, 40.712), (-74.008, 40.706)]}]
 
     for zone_data in zones_data:
         boundary = Polygon(zone_data['boundary'])
-        draw_zone(boundary)
+        draw_zone(mymap, boundary)
 
-    map_path = 'static/simulation_map_with_zones.html'
+    draw.add_to(mymap)
+    
+    # Save the map to an HTML file
+    map_path = 'templates/map_zones_map.html'
     mymap.save(map_path)
 
     return render_template('map_zones.html', map_path=map_path)
 
-def draw_zone(boundary):
+def draw_zone(mymap, boundary):
     x, y = boundary.exterior.coords.xy
-    plt.fill(x, y, alpha=0.5, color='red')
+    folium.Polygon(zip(y, x), color='red', fill=True, fill_color='red', fill_opacity=0.5).add_to(mymap)
 
 if __name__ == '__main__':
     app.run(debug=True)
