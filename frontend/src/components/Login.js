@@ -1,7 +1,6 @@
-// src/components/Login.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axiosApi from '../axiosApi'; // Ensure this import matches the file name exactly
 import '../assets/css/main.css';
 
 function Login() {
@@ -11,12 +10,22 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        // Here you will handle the authentication logic, possibly making an API call to your backend
-        // For now, it's just a console log and a navigation to the dashboard
-        console.log('Login:', { email, password });
-        // TODO: Authenticate user, then navigate on success
-        // Upon successful login, navigate to the dashboard
-        navigate('/dashboard');
+        try {
+            const response = await axiosApi.post('login/', {
+                username: email,
+                password: password,
+            });
+            if (response.status === 200) {
+                localStorage.setItem('token', response.data.token); // Save the token locally
+                navigate('/dashboard'); // Navigate to dashboard
+            } else {
+                console.error("Login failed:", response.data);
+                // Optionally handle login failure
+            }
+        } catch (error) {
+            console.error("Login error:", error.response ? error.response.data : "Unknown Error");
+            // Handle errors here
+        }
     };
 
     return (

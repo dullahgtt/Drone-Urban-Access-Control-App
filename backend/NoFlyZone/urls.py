@@ -1,22 +1,11 @@
-"""
-URL configuration for NoFlyZone project.
+# NoFlyZone/urls.py (this is the project's main urls.py file)
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include  # make sure to import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('zones/', include('zones.urls')),  # Adjust the path as needed
+    # If you want 'zones/' to be a prefix for all URLs in the zones app, use 'zones/'. 
+    # Otherwise, use '' to include them directly under the base URL.
 ]
