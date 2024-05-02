@@ -144,3 +144,58 @@ body, html {
     padding: 20px;
     text-align: center;
 }
+
+
+/* Delivery Partner - main.css */
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Slide up animation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the delivery-partner section */
+.delivery-partner {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 50px 20px; /* Adjust padding as needed */
+    text-align: center;
+    position: relative; /* Position relative for pseudo-element */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+.delivery-partner::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px; /* Thickness of the line */
+    background: linear-gradient(to right, #007bff, transparent); /* Gradient effect for the line */
+    z-index: -1; /* Move behind content */
+}
+
+/* Unique styling for the delivery-partner section */
+.delivery-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery-partner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .delivery-partner {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+}
