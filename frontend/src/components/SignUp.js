@@ -1,7 +1,6 @@
-// src/components/SignUp.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axiosApi from '../axiosApi';
 import '../assets/css/main.css';
 
 function SignUp() {
@@ -11,12 +10,21 @@ function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you will handle the sign-up logic, possibly making an API call to your backend
-        // For now, it's just a console log and a navigation to the dashboard
-        console.log('Sign Up:', { email, password });
-        // TODO: Sign up user, then navigate on success
-        // Upon successful sign up, navigate to the dashboard
-        navigate('/dashboard');
+        try {
+            const response = await axiosApi.post('/signup/', {
+                email: email,
+                password: password,
+            });
+            if (response.status === 201) {
+                // Handle successful signup, e.g., navigate to the dashboard or store the received token
+                console.log('Signup Successful');
+            } else {
+                // Handle non-201 responses
+                console.log('Signup Failed:', response.data);
+            }
+        } catch (error) {
+            console.error("Signup Error:", error.response || error);
+        }
     };
 
     return (
