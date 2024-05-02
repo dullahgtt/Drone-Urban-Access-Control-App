@@ -30,10 +30,29 @@ body, html {
 }
 
 .hero-section {
-    background-color: #0096d2;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space items evenly along the main axis */
+    background-color: #0e1c33;
     color: white;
-    padding: 50px 20px;
-    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 50vh;
+}
+
+.hero-section h1 {
+    font-size: 44px;
+    margin-right: auto; /* Push h1 to the left side */
+    padding-left: 280px;
+}
+
+.hero-section img {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 200px;
 }
 
 .delivery-partner, .why-nfz, .explore-model, .human-factors {
