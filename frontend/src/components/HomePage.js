@@ -20,6 +20,7 @@ function HomePage() {
             {/* Hero Section */}
             <section className="hero-section">
                 <h1>No Fly Zone: Drone Delivery</h1>
+                <img src='/assets/images/Hero-icon.png' />
             </section>
 
             {/* Fast Delivery Partner Section */}
