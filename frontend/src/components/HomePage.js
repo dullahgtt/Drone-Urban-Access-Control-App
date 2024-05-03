@@ -7,18 +7,14 @@ function HomePage() {
     return (
         <div>
             {/* Banner */}
-            <header className="app-banner">
-                <div className="banner-content">
-                    <Link to="/" className="home-link">No Fly Zone</Link>
-                    <div>
-                        <Link to="/signup" className="btn">Sign Up</Link>
-                        <Link to="/login" className="btn">Log In</Link>
-                    </div>
-                </div>
-            </header>
+            
 
             {/* Hero Section */}
             <section className="hero-section">
+            <div>
+                        <Link to="/signup" className="btn">Sign Up</Link>
+                        <Link to="/login" className="btn">Log In</Link>
+                    </div>
                 <h1>No Fly Zone: Drone Delivery</h1>
                 <img src='/assets/images/Hero-icon.png' />
             </section>
@@ -63,48 +59,83 @@ function HomePage() {
     <h2>Human Factors Used</h2>
     <div className="card-container">
         {/* UI Design & Usability */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Ui-design.png' />
             <h3>UI Design & Usability</h3>
             <p>Enhance user experience with intuitive navigation, clear labels, and responsive design for seamless interaction across devices.</p>
         </div>
 
         {/* Privacy & Trust */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Privacy-trust.jpg' />
             <h3>Privacy & Trust</h3>
             <p>Foster trust through end-to-end encryption safeguarding user data, alongside transparent policies granting users control over their personal information.</p>
         </div>
 
         {/* Engagement & Feedback Mechanisms */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Interactive-mechanisms.jpg' />
             <h3>Engagement & Feedback Mechanisms</h3>
             <p>Enhance user engagement with interactive tutorials for first-time users and facilitate real-time feedback and suggestions through in-app features.</p>
         </div>
 
         {/* Safety & Emergency Awareness */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Real-time-alert.jpg' />
             <h3>Safety & Emergency Awareness</h3>
             <p>Ensure safety with real-time alerts for nearby drone activity and expedite assistance with a quick-access emergency contact feature.</p>
         </div>
 
         {/* Sensory Functions & Perceptual Abilities */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Sensory-ability.jpg' />
             <h3>Sensory Functions & Perceptual Abilities</h3>
             <p>Customized sensory elements, ensuring readability and accessibility while optimizing visibility through contrast, color, and typography.</p>
         </div>
 
         {/* Cognitive Functioning */}
-        <div className="card">
+        <div className="cardHF">
+            <img src='/assets/images/Cognitive-function.jpg' />
             <h3>Cognitive Functioning</h3>
             <p>Simplified navigation and decision-making processes minimize cognitive load, supported by clear and intuitive cues for seamless user interaction.</p>
         </div>
     </div>
 </section>
 
+        
 
             {/* Footer */}
             <footer className="footer">
-                <p>Footer content here - developer information, etc.</p>
-            </footer>
+    <div className="footer-column">
+        <h3> CS4326: Group 9</h3>
+        <div className="member-container">
+            <div className="circle"></div>
+            <p>Abdullah Kamal</p>
+        </div>
+        <div className="member-container">
+            <div className="circle"></div>
+            <p>Stormie Renevey</p>
+        </div>
+        <div className="member-container">
+            <div className="circle"></div>
+            <p>Braden Schlueter</p>
+        </div>
+    </div>
+    <div className="footer-column">
+        <h3>Useful Links</h3>
+        <a href="#">Home</a>
+    </div>
+    <div className="footer-column">
+        <h3>Contact Us</h3>
+        <p>601 University Dr<br />San Marcos, TX 78666</p>
+    </div>
+</footer>
+
+
+
+
+        
+        
         </div>
     );
 }
