@@ -55,9 +55,24 @@ body, html {
     padding-right: 200px;
 }
 
-.delivery-partner, .why-nfz, .explore-model, .human-factors {
+.delivery-partner, .why-nfz, .human-factors {
     padding: 20px;
     text-align: center;
+}
+
+
+.explore-model {
+    padding: 200px;
+    text-align: center;
+    
+    background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url('/src/assets/images/Our-model.png') center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.explore-model p,
+.explore-model h2 {
+    color: white;
 }
 
 .card-container {
@@ -67,12 +82,22 @@ body, html {
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: none;
+    border-radius: 8px;
     margin: 10px;
     padding: 20px;
     flex-basis: 30%;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-5px); /* Move the card slightly upwards on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .footer {
     background-color: #003366;
@@ -84,10 +109,17 @@ body, html {
 .explore-btn {
     padding: 10px 20px;
     background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: #ffffff;
+    border: 2px solid #557ec1;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
 }
+
+.explore-btn:hover {
+    background-color: #132644; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
 
 /* Sign Up - main.css */ 
 
@@ -198,4 +230,46 @@ body, html {
     .delivery-partner {
         padding: 40px 20px; /* Adjust padding for smaller screens */
     }
+}
+
+.why-nfz {
+    background-color: #10203a; /* Initial background color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.why-nfz:hover {
+    background-color: #102540; /* Lighter background color on hover */
+}
+
+
+
+@keyframes textAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .why-nfz h2 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    animation: textAnimation 2s infinite; /* Apply the animation to the text */
+  }
+  
+
+.why-nfz .card-container p {
+    display: flex;
+    align-items: center; /* Align items vertically in the flex container */
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.why-nfz img {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    order: -1; /* Move the image to the beginning of the flex container */
+    margin-right: 10px; /* Add margin to separate the image from the text */
+    justify-content: left;
+    align-items: left;
 }
