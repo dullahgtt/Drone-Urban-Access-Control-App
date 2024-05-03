@@ -55,9 +55,24 @@ body, html {
     padding-right: 200px;
 }
 
-.delivery-partner, .why-nfz, .explore-model, .human-factors {
+.delivery-partner, .why-nfz, .human-factors {
     padding: 20px;
     text-align: center;
+}
+
+
+.explore-model {
+    padding: 200px;
+    text-align: center;
+    
+    background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url('/src/assets/images/Our-model.png') center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.explore-model p,
+.explore-model h2 {
+    color: white;
 }
 
 .card-container {
@@ -67,12 +82,22 @@ body, html {
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: none;
+    border-radius: 8px;
     margin: 10px;
     padding: 20px;
     flex-basis: 30%;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-5px); /* Move the card slightly upwards on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .footer {
     background-color: #003366;
@@ -84,10 +109,17 @@ body, html {
 .explore-btn {
     padding: 10px 20px;
     background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: #ffffff;
+    border: 2px solid #557ec1;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
 }
+
+.explore-btn:hover {
+    background-color: #132644; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
 
 /* Sign Up - main.css */ 
 
@@ -143,4 +175,101 @@ body, html {
 .dashboard-container {
     padding: 20px;
     text-align: center;
+}
+
+
+/* Delivery Partner - main.css */
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Slide up animation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the delivery-partner section */
+.delivery-partner {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 50px 20px; /* Adjust padding as needed */
+    text-align: center;
+    position: relative; /* Position relative for pseudo-element */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+.delivery-partner::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px; /* Thickness of the line */
+    background: linear-gradient(to right, #007bff, transparent); /* Gradient effect for the line */
+    z-index: -1; /* Move behind content */
+}
+
+/* Unique styling for the delivery-partner section */
+.delivery-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery-partner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .delivery-partner {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+.why-nfz {
+    background-color: #10203a; /* Initial background color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.why-nfz:hover {
+    background-color: #102540; /* Lighter background color on hover */
+}
+
+
+
+@keyframes textAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .why-nfz h2 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    animation: textAnimation 2s infinite; /* Apply the animation to the text */
+  }
+  
+
+.why-nfz .card-container p {
+    display: flex;
+    align-items: center; /* Align items vertically in the flex container */
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.why-nfz img {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    order: -1; /* Move the image to the beginning of the flex container */
+    margin-right: 10px; /* Add margin to separate the image from the text */
+    justify-content: left;
+    align-items: left;
 }

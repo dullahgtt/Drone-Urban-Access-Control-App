@@ -36,20 +36,24 @@ function HomePage() {
                     <div className="card">
                         <h3>Increase in Unmanned Aerial Systems</h3>
                         <p>In the United States alone, there are over 900,000 drones registered with the Federal Aviation Administration (FAA).</p>
+                        <img src='/assets/images/Increase.png' />
                     </div>
                     <div className="card">
                         <h3>Lack of Centralized Solutions</h3>
                         <p>Our solution provides a centralized source for all flight preferences of the average citizen. This ensures that drone operators cannot invade private areas without prior authorization, aligning with both FAA policies and property owner preferences.</p>
+                        <img src='/assets/images/Safe.png' />
                     </div>
                     <div className="card">
                         <h3>Human Safety Concerns</h3>
                         <p>There have been instances of people seizing drones flying over private property, unauthorized hijackings, and near collisions with other aircraft and objects underscore the need for heightened security measures.</p>
+                        <img src='/assets/images/Safety.png' />
                     </div>
                 </div>
             </section>
 
             {/* Explore Our Model */}
             <section className="explore-model">
+                <h2>Our Model</h2>
                 <p>We are introducing a model that not only evaluates access to environments based on designated attributes, but also helps companies direct their drones safely in public spaces. This model allows for the restriction or permission of drone flyovers in specific physical spaces, termed as zones. The application architecture will utilize Attribute-Based Access Control (ABAC) to collect airspace restrictions and essential factors, enhancing path planning accuracy and overall operational efficiency for drone operators.</p>
                 <button className="explore-btn">Explore Our Model</button>
             </section>
