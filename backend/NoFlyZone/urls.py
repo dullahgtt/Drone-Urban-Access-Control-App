@@ -1,11 +1,14 @@
-# NoFlyZone/urls.py (this is the project's main urls.py file)
-
+from django.urls import path, include
+from django.views.generic.base import RedirectView
 from django.contrib import admin
-from django.urls import path, include  # make sure to import include
 
 urlpatterns = [
+    # Redirect the base URL to the admin interface
+    path('', RedirectView.as_view(url='/admin/', permanent=True)),  # Note: Ensure the URL starts with a forward slash for an absolute path
+
+    # Admin URL
     path('admin/', admin.site.urls),
-    path('zones/', include('zones.urls')),  # Adjust the path as needed
-    # If you want 'zones/' to be a prefix for all URLs in the zones app, use 'zones/'. 
-    # Otherwise, use '' to include them directly under the base URL.
+
+    # Include your app's URLs under the 'zones/' prefix
+    path('zones/', include('zones.urls')),
 ]
