@@ -7,6 +7,8 @@ function HomePage() {
     const navigate = useNavigate();
 
     const handleExploreClick = () => {
+        model.exploreModel();
+        
         navigate('/model');
     };
 
