@@ -7,10 +7,9 @@ function HomePage() {
     const navigate = useNavigate();
 
     const handleExploreClick = () => {
-        model.exploreModel();
-
-        navigate('/dashboard');
+        navigate('/model');
     };
+
     return (
         <div>
             {/* Banner */}

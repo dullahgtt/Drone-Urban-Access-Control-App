@@ -264,6 +264,23 @@ body, html {
     text-align: center;
 }
 
+.login-container h1 {
+    font-size: 46px;
+    color: #333; /* Default color */
+    animation: textShadowAnimation 2s infinite alternate; /* Apply the animation */
+}
+
+@keyframes textShadowAnimation {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Initial text shadow */
+    }
+    100% {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Final text shadow */
+    }
+}
+
+
+
 .login-form label {
     display: block;
     margin-top: 20px;
