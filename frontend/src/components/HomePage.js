@@ -8,8 +8,8 @@ function HomePage() {
 
     const handleExploreClick = () => {
         model.exploreModel();
-        
-        navigate('/model');
+
+        navigate('/Model.js');
     };
 
     return (
