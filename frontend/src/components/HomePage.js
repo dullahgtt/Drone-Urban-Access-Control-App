@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../assets/css/main.css';
-
+import model from './Model';
 
 function HomePage() {
+    const navigate = useNavigate();
+
+    const handleExploreClick = () => {
+        model.exploreModel();
+
+        navigate('/dashboard');
+    };
     return (
         <div>
             {/* Banner */}
@@ -51,7 +58,7 @@ function HomePage() {
             <section className="explore-model">
                 <h2>Our Model</h2>
                 <p>We are introducing a model that not only evaluates access to environments based on designated attributes, but also helps companies direct their drones safely in public spaces. This model allows for the restriction or permission of drone flyovers in specific physical spaces, termed as zones. The application architecture will utilize Attribute-Based Access Control (ABAC) to collect airspace restrictions and essential factors, enhancing path planning accuracy and overall operational efficiency for drone operators.</p>
-                <button className="explore-btn">Explore Our Model</button>
+                <button className="explore-btn" onClick={handleExploreClick}>Explore Our Model</button>
             </section>
 
             {/* Human Factors */}
@@ -130,11 +137,6 @@ function HomePage() {
         <p>601 University Dr<br />San Marcos, TX 78666</p>
     </div>
 </footer>
-
-
-
-
-        
         
         </div>
     );
