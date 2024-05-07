@@ -10,34 +10,18 @@ We propose an initial exploration of this issue to address these concerns on a w
 
 To underscore the significance of our proposed work, we will proceed to analyze recent papers on drone path planning and security. We will then break down the key components and proposed methods of our work. A desired implementation of our approach will be provided, followed by a basic outline of testing methods to be used.  
 
-## Running the Live Server:
+## Running the Application:
 
-To Easily Run a Local Server in Visual Studio Code, Use the Live Server Extension - Braden 
+To run this project, clone it in Github
 
-Name: Live Server
+Once cloned, navigate to the project directory using the terminal of your choice 
+    Here is the path we are using: frontend/
 
-Id: ritwickdey.LiveServer
+Once you've navigated to the directory path, run: 
+    'npm i' 
 
-Description: Launch a development local Server with live reload feature for static & dynamic pages
-
-Version: 5.7.9
-
-Publisher: Ritwick Dey
-
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+After the required packages are installed, run: 
+    'npm start'
 
 
-Once installed, to use it, open the file you want to run in the server, then right-click and select "Open with Live Server" from the context menu. 
-The server will start and the file will open in your default browser. 
-The server will automatically reload the page when you save changes to the file.
-
-## Motivation:
-
-## Objective:
-
-## Results:
-
-## Conclusion:
-
-## Limitations:
 
