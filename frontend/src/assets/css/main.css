@@ -406,6 +406,12 @@ body, html {
     align-items: center;
 }
 
+.form-container h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
 .form-control {
     width: 100%;
     padding: 25px;
@@ -415,8 +421,65 @@ body, html {
 }
 
 
-
 select.form-control {
-    /* Add specific styles for the select element if needed */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.submit-button {
+    width: 100%;
+    background-color: #ff69b4; /* Pink color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.button-control {
+    padding: 10px;
+    width: 20%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* Set background color of select dropdown */
+    margin-left: 120px;
+}
+
+.button-control option[value="green"] {
+    background-color: green !important;
+    color: white !important;
+}
+
+.button-control option[value="yellow"] {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+.button-control option[value="red"] {
+    background-color: red !important;
+    color: white !important;
+}
+
+.add-property {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #284b82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 140px;
+    width: 20%;
+}
+
+.add-property:hover {
+    background-color: #467ace;
+}
+
+
+
 

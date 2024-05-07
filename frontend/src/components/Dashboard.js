@@ -66,6 +66,7 @@ function PropertyMap() {
             </MapContainer>
             <div style={{ padding: '20px', background: '#fff' }}>
                <div className='form-container' >
+                <h2>Add Property Zone</h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="number"
@@ -98,12 +99,14 @@ function PropertyMap() {
                         name="status"
                         value={newProperty.status}
                         onChange={handleInputChange}
-                    >
+                        className='button-control'
+                    >   
+                
                         <option value="green">Green</option>
                         <option value="yellow">Yellow</option>
                         <option value="red">Red</option>
                     </select>
-                    <button type="submit">Add Property</button>
+                    <button type="submit" className='add-property'>Add Property</button>
                 </form>
               </div>
             </div>
