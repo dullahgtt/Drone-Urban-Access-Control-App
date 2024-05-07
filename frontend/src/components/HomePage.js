@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../assets/css/main.css';
-import model from './Model';
+
 
 function HomePage() {
     const navigate = useNavigate();
 
     const handleExploreClick = () => {
-        model.exploreModel();
+        
 
-        navigate('/Dashboard.js');
+        navigate('/Dashboard');
     };
 
     return (
