@@ -65,6 +65,7 @@ function PropertyMap() {
                 ))}
             </MapContainer>
             <div style={{ padding: '20px', background: '#fff' }}>
+               <div className='form-container' >
                 <form onSubmit={handleSubmit}>
                     <input
                         type="number"
@@ -73,6 +74,7 @@ function PropertyMap() {
                         onChange={handleInputChange}
                         placeholder="Longitude"
                         required
+                        className='form-control'
                     />
                     <input
                         type="number"
@@ -81,6 +83,7 @@ function PropertyMap() {
                         onChange={handleInputChange}
                         placeholder="Latitude"
                         required
+                        className='form-control'
                     />
                     <input
                         type="number"
@@ -89,6 +92,7 @@ function PropertyMap() {
                         onChange={handleInputChange}
                         placeholder="Radius (meters)"
                         required
+                        className='form-control'
                     />
                     <select
                         name="status"
@@ -101,6 +105,7 @@ function PropertyMap() {
                     </select>
                     <button type="submit">Add Property</button>
                 </form>
+              </div>
             </div>
         </div>
     );

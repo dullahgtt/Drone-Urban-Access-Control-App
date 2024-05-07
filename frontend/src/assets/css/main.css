@@ -397,3 +397,26 @@ body, html {
     justify-content: left;
     align-items: left;
 }
+
+.form-container {
+    padding: 100px;
+    background: #0e1c33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+select.form-control {
+    /* Add specific styles for the select element if needed */
+}
+
