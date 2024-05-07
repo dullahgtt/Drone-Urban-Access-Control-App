@@ -1,3 +1,8 @@
+
+import { Link, useNavigate } from 'react-router-dom';
+
+
+
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Circle, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -40,6 +45,15 @@ function PropertyMap() {
 
     return (
         <div>
+            <section className="hero-section">
+            <div>
+                        <Link to="/" className="btn">Home</Link>              
+                        <Link to="/signup" className="btn">Sign Up</Link>
+                        <Link to="/login" className="btn">Log In</Link>
+                    </div>
+                
+            </section>
+
             <MapContainer center={center} zoom={13} style={{ height: '500px', width: '100%' }}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
