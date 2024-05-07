@@ -9,7 +9,7 @@ function HomePage() {
     const handleExploreClick = () => {
         model.exploreModel();
 
-        navigate('/Model.js');
+        navigate('/Dashboard.js');
     };
 
     return (
