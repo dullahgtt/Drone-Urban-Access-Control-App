@@ -45,13 +45,12 @@ function PropertyMap() {
 
     return (
         <div>
-            <section className="hero-section">
-            <div>
-                        <Link to="/" className="btn">Home</Link>              
-                        <Link to="/signup" className="btn">Sign Up</Link>
-                        <Link to="/login" className="btn">Log In</Link>
+            <section className="hero-dashboard">
+                    <div className='dashboard-container'>
+                        <Link to="/" className="btn-dashboard">Home</Link>              
+                        <Link to="/signup" className="btn-dashboard">Sign Up</Link>
+                        <Link to="/login" className="btn-dashboard">Log In</Link>
                     </div>
-                
             </section>
 
             <MapContainer center={center} zoom={13} style={{ height: '500px', width: '100%' }}>

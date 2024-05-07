@@ -445,7 +445,7 @@ select.form-control {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: white; /* Set background color of select dropdown */
-    margin-left: 120px;
+    margin-left: 300px;
 }
 
 .button-control option[value="green"] {
@@ -480,6 +480,44 @@ select.form-control {
     background-color: #467ace;
 }
 
+
+.hero-dashboard {
+    background-color: #f0f0f0; /* Background color of the hero section */
+    padding-bottom: 20px; /* Add padding to the hero section */
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    background-color: #0e1c33;
+    color: white;
+
+    padding-bottom: 50px;
+    min-height: 50vh;
+    background-image: url('/src/assets/images/Hero-bg.png');
+    background-size: 110%; /* Zoom out the background image by 10% */
+    background-position: center; /* Center the background image */
+}
+
+.btn-dashboard {
+    background-color: #284b82;
+    border: none;
+    height: 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px; /* Make the button round */
+    padding: 10px 54px;
+    margin: 0 10px; /* Add spacing between buttons */
+    cursor: pointer;
+    /* Get text to move down a bit */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+    margin-top: 80px;
+}
 
 
 
