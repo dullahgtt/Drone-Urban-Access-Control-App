@@ -101,7 +101,7 @@ DATABASES = {
 }
 
 # I CHANGED THE PATHS TO SEE IF THIS IS MORE UNIVERSAL (NOT SURE IF IT WORKS)
-GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.8.5/lib/libgdal.dylib'
+GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.8.5_2/lib/libgdal.dylib'
 GEOS_LIBRARY_PATH = '/opt/homebrew/Cellar/geos/3.12.1/lib/libgeos_c.dylib'
 
 
